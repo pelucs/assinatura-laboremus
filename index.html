@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASSINATURA LABOREMUS</title>
+  <link rel="stylesheet" href="style/styles.css">
+  <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <section>
+    <div class="warning">
+      Preencha todos os campos <br> corretamente!
+    </div>
+
+    <!-- FORMULÁRIO -->
+    <div class="box">
+      <h1>Criar nova assinatura</h1>
+
+      <div class="input-box">
+        <div class="input">
+          <label for="name"><span>*</span>Nome</label>
+          <input 
+            type="text" 
+            id="name" 
+            placeholder="Informe seu nome e sobrenome" 
+            required 
+            oninput="handleValue('name')"
+          >
+        </div>
+
+        <div class="input">
+          <label for="office"><span>*</span>Cargo</label>
+          <input 
+            type="text" 
+            id="office" 
+            placeholder="Informe seu cargo" 
+            required 
+            oninput="handleValue('office')"
+          >
+        </div>
+
+        <div class="input">
+          <label for="number"><span>*</span>Telefone</label>
+          <input 
+            type="text" 
+            id="number"
+            required 
+            oninput="handleValue('number')"
+            value="(+55) "
+          >
+        </div>
+
+        <div class="input">
+          <label for="email"><span>*</span>Email corporativo</label>
+          <input 
+            type="text" 
+            id="email" 
+            placeholder="Email corporativo" 
+            required 
+            oninput="handleValue('email')"
+          >
+        </div>
+
+        <button onclick="downloadSignature()">Baixar assinatura</button>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- PREVIEW DA IMAGEM -->
+    <div class="box">
+      <h1>Preview da imagem</h1>
+
+      <div class="canvas-box">
+        <div id="canvas" class="canvas">
+          <div class="bg">
+            <img src="assets/image-png.png">
+          </div>
+          <div class="info-user">
+            <h1>Atenciosamente,</h1>
+  
+            <strong id="name-signature">Seu nome</strong>
+            <h2 id="office-signature">Seu cargo</h2>
+
+            <div class="icones">
+              <div class="icone">
+                <div class="retangulo">
+                  <span>
+                    <ion-icon name="call-outline"></ion-icon>
+                  </span>
+                  <p id="number-signature">Seu número</p>
+                </div>
+              </div>
+
+              <div class="icone">
+                <div class="retangulo">
+                  <span>
+                    <ion-icon name="mail-outline"></ion-icon>
+                  </span>
+                  <p id="email-signature">Seu email corporativo</p>
+                </div>
+              </div>
+
+              <div class="icone">
+                <div class="retangulo">
+                  <span>
+                    <ion-icon name="globe-outline"></ion-icon>
+                  </span>
+                  <p>www.laboremus.com.br</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="right-info">
+            <strong>
+              Av. R. Dep. Raimundo Asfora, 3400 - BR230 - Distrito Industrial <br> 
+              Campina Grande - PB, 58420-000 | (83) 3335-3555
+            </strong>
+            <div class="img-box">
+              <img src="assets/logo-laboremus.png" alt="Logo Laboremus">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/script.js"></script>
+  <script src="js/html2canvas.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
